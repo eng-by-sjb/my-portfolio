@@ -1,28 +1,10 @@
-import {
-  // type Dispatch,
-  // type SetStateAction,
-  useRef,
-  useEffect,
-  useState,
-  useCallback,
-} from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
 import { links } from "../data";
-
-// type Props = {
-//   setNavHeight: Dispatch<SetStateAction<number>>;
-// };
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [isScrollDown, setIsScrollDown] = useState(false);
   const linksRef = useRef<HTMLDivElement>(null);
-
-  // useEffect(() => {
-  // const navContainerRef = useRef<HTMLDivElement>(null);
-  //   if (navContainerRef.current === null) return;
-
-  //   setNavHeight(navContainerRef.current?.getBoundingClientRect().height);
-  // }, [setNavHeight]);
 
   const handleScroll = useCallback(() => {
     const currentScrollPos = window.scrollY;
