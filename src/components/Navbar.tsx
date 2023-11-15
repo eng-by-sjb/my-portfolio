@@ -6,9 +6,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`backdrop-blur-lg fixed w-screen z-50 top-0 transition-all overflow-hidden ease-out sm:h-auto ${
+      className={`fixed w-screen z-50 top-0 transition-all overflow-hidden ease-out sm:h-auto ${
         isScrollDown ? "h-[68px] duration-[500ms]" : "h-[114px] duration-300"
-      } ${window.scrollY <= 3 ? "bg-sky-100" : "shadow rounded-b-lg bg-sky-100/90"}`}>
+      } ${
+        window.scrollY <= 3 ? "bg-sky-100" : "shadow rounded-b-lg bg-sky-100/90 backdrop-blur-lg"
+      }`}>
       <div className="mx-auto max-w-7xl px-16 py-4 flex flex-col text-center sm:flex-row sm:items-center sm:justify-between">
         <h2 className="text-3xl">
           FullStack

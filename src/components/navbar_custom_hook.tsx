@@ -3,7 +3,6 @@ import { useCallback, useEffect, useState } from "react";
 export const useNavScroll = () => {
   const [isScrollDown, setIsScrollDown] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
-  // const linksRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = useCallback(() => {
     const currentScrollPos = window.scrollY;
