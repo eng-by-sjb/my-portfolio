@@ -1,30 +1,8 @@
-import { useRef, useEffect, useState, useCallback } from "react";
 import { links } from "../data";
+import { useNavScroll } from "./navbar_custom_hook";
 
 const Navbar = () => {
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [isScrollDown, setIsScrollDown] = useState(false);
-  const linksRef = useRef<HTMLDivElement>(null);
-
-  const handleScroll = useCallback(() => {
-    const currentScrollPos = window.scrollY;
-
-    if (currentScrollPos > prevScrollPos) {
-      setIsScrollDown(true);
-    } else {
-      setIsScrollDown(false);
-    }
-
-    setPrevScrollPos(currentScrollPos);
-  }, [prevScrollPos]);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [handleScroll]);
+  const { isScrollDown } = useNavScroll();
 
   return (
     <nav
@@ -41,9 +19,9 @@ const Navbar = () => {
           className={`transition duration-300 ease-out sm:scale-100 sm:h-auto sm:opacity-100 ${
             isScrollDown
               ? "overflow-hidden duration-[500ms] opacity-0 scale-90"
-              : " overflow-hidden duration-300 opacity-100 "
+              : "overflow-hidden duration-300 opacity-100"
           }`}>
-          <div className="mt-4 flex gap-x-3 justify-center sm:flex-row sm:mt-0" ref={linksRef}>
+          <div className="px-2 mt-4 flex gap-x-3 justify-center sm:mt-0">
             {links.map(({ href, id, text }) => {
               return (
                 <a
