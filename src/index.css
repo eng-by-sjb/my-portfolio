@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* body {
+  background: red;
+  height: 30000px;
+} */
+
+@layer base {
+  body {
+    height: 30000px;
+    /* background: red; */
+    @apply bg-sky-100;
+  }
+}
