@@ -6,5 +6,10 @@
   body {
     height: 30000px;
     @apply bg-sky-100;
+    /* @apply relative; */
+  }
+
+  .align-elements {
+    @apply mx-auto max-w-7xl px-16 py-4;
   }
 }

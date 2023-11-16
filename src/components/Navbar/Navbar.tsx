@@ -1,17 +1,24 @@
-import { links } from "../data";
+import { type MouseEvent } from "react";
+import { links } from "../../data";
 import { useNavScroll } from "./navbar_custom_hook";
 
 const Navbar = () => {
   const { isScrollDown } = useNavScroll();
+
+  const handleNavToHome = (e: MouseEvent<HTMLAnchorElement>) => {
+    if (e.currentTarget.text === "home") window.scrollTo({ top: 0 });
+  };
 
   return (
     <nav
       className={`fixed w-screen z-50 top-0 transition-all overflow-hidden ease-out sm:h-auto ${
         isScrollDown ? "h-[68px] duration-[500ms]" : "h-[114px] duration-300"
       } ${
-        window.scrollY <= 3 ? "bg-sky-100" : "shadow rounded-b-lg bg-sky-100/90 backdrop-blur-lg"
+        window.scrollY <= 3
+          ? "bg-sky-100"
+          : "drop-shadow rounded-b-xl bg-sky-100/50 backdrop-blur-lg"
       }`}>
-      <div className="mx-auto max-w-7xl px-16 py-4 flex flex-col text-center sm:flex-row sm:items-center sm:justify-between">
+      <div className="align-elements flex flex-col text-center sm:flex-row sm:items-center sm:justify-between">
         <h2 className="text-3xl">
           FullStack
           <span className="text-sky-600 font-semibold">Dev</span>
@@ -27,6 +34,7 @@ const Navbar = () => {
             {links.map(({ href, id, text }) => {
               return (
                 <a
+                  onClick={handleNavToHome}
                   key={id}
                   className="capitalize tracking-wide transition duration-300 ease-in hover:scale-110 hover:text-sky-600"
                   href={href}>
