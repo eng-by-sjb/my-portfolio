@@ -78,7 +78,7 @@ const Hero = () => {
           {/* shows on large screen */}
         </div>
 
-        <img src={heroImg} alt="" className="" />
+        <img src={heroImg} alt="" className="scale-90 sm:scale-100" />
 
         {/* shows on small screen */}
         <div
