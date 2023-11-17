@@ -23,7 +23,7 @@ export const techStacks = [
     id: nanoid(),
     title: "TypeScript",
     icon: <BiLogoTypescript className="h-14 w-14 text-sky-400 rounded shadow shadow-sky-600/40" />,
-    text: "Expertise in JavaScript, building interactive and dynamic web applications with a focus on seamless user interactions and functionality",
+    text: "Expertise in TypeScript, building interactive and dynamic web applications with a focus on seamless user interactions and functionality",
   },
   {
     id: nanoid(),
