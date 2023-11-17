@@ -20,7 +20,11 @@ const Navbar = () => {
           : "drop-shadow-md rounded-b-xl bg-sky-100/40 backdrop-blur-lg"
       }`}>
       <div className="align-elements flex flex-col text-center sm:flex-row sm:items-center sm:justify-between">
-        <h2 className="text-3xl">
+        <h2
+          className="text-3xl cursor-pointer"
+          onClick={() => {
+            window.scrollTo({ top: 0 });
+          }}>
           FullStack
           <span className="text-sky-600 font-semibold">Dev</span>
         </h2>

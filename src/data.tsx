@@ -41,7 +41,7 @@ export const techStacks = [
     id: nanoid(),
     title: "NodeJS",
     icon: <FaNodeJs className="h-14 w-14 text-sky-400 rounded shadow shadow-sky-600/40" />,
-    text: "Advanced proficiency in React, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.",
+    text: "Ability to leverage NodeJS to build highly robust, secure ServerSide API's with either Monolithic or MicroServices architectures.",
   },
   {
     id: nanoid(),
