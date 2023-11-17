@@ -1,6 +1,4 @@
-import Hero from "./components/Hero/Hero";
-import Navbar from "./components/Navbar/Navbar";
-import TechStack from "./components/TechStack/TechStack";
+import { Hero, Navbar, TechStack } from "./components";
 
 function App() {
   return (

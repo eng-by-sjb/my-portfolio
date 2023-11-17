@@ -1,30 +1,94 @@
 import { nanoid } from "nanoid";
-import { FaHtml5, FaJs, FaReact } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaDocker, FaGitSquare } from "react-icons/fa";
+import { TbBrandNextjs } from "react-icons/tb";
+import { SiHtml5, SiTurborepo, SiMongodb, SiGithubactions, SiTailwindcss } from "react-icons/si";
+import { BiLogoTypescript, BiLogoPostgresql, BiLogoGoLang } from "react-icons/bi";
 
 export const links = [
   { id: nanoid(), href: "#/", text: "home" },
-  { id: nanoid(), href: "#skills", text: "skills" },
+  { id: nanoid(), href: "#skills", text: "techStack" },
   { id: nanoid(), href: "#about", text: "about" },
   { id: nanoid(), href: "#projects", text: "projects" },
 ];
 
-export const skills = [
+export const techStacks = [
   {
     id: nanoid(),
     title: "HTML&CSS",
-    icon: <FaHtml5 className="h-16 w-16 text-sky-500" />,
+    icon: <SiHtml5 className="h-14 w-14 text-sky-400 rounded shadow shadow-sky-600/40" />,
     text: "Highly skilled in HTML & CSS, adeptly crafting visually appealing and responsive websites for optimal user experiences.",
+  },
+
+  {
+    id: nanoid(),
+    title: "TypeScript",
+    icon: <BiLogoTypescript className="h-14 w-14 text-sky-400 rounded shadow shadow-sky-600/40" />,
+    text: "Expertise in JavaScript, building interactive and dynamic web applications with a focus on seamless user interactions and functionality",
   },
   {
     id: nanoid(),
-    title: "Javascript",
-    icon: <FaJs className="h-16 w-16 text-sky-500" />,
+    title: "Tailwind CSS",
+    icon: <SiTailwindcss className="h-14 w-14 text-sky-400 rounded shadow shadow-sky-600/40" />,
     text: "Expertise in JavaScript, building interactive and dynamic web applications with a focus on seamless user interactions and functionality",
   },
   {
     id: nanoid(),
     title: "React",
-    icon: <FaReact className="h-16 w-16 text-sky-500" />,
+    icon: <FaReact className="h-14 w-14 text-sky-400 rounded shadow shadow-sky-600/40" />,
+    text: "Advanced proficiency in React, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.",
+  },
+  {
+    id: nanoid(),
+    title: "NodeJS",
+    icon: <FaNodeJs className="h-14 w-14 text-sky-400 rounded shadow shadow-sky-600/40" />,
+    text: "Advanced proficiency in React, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.",
+  },
+  {
+    id: nanoid(),
+    title: "Go (Coming Soon)",
+    icon: <BiLogoGoLang className="h-14 w-14 text-sky-400 rounded shadow shadow-sky-600/40" />,
+    text: "Advanced proficiency in React, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.",
+  },
+  {
+    id: nanoid(),
+    title: "Next JS",
+    icon: <TbBrandNextjs className="h-14 w-14 text-sky-400 rounded shadow shadow-sky-600/40" />,
+    text: "Advanced proficiency in React, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.",
+  },
+  {
+    id: nanoid(),
+    title: "Turborepo",
+    icon: <SiTurborepo className="h-14 w-14 text-sky-400 rounded shadow shadow-sky-600/40" />,
+    text: "Advanced proficiency in React, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.",
+  },
+  {
+    id: nanoid(),
+    title: "MongoDB",
+    icon: <SiMongodb className="h-14 w-14 text-sky-400 rounded shadow shadow-sky-600/40" />,
+    text: "Advanced proficiency in React, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.",
+  },
+  {
+    id: nanoid(),
+    title: "PostgreSQL",
+    icon: <BiLogoPostgresql className="h-14 w-14 text-sky-400 rounded shadow shadow-sky-600/40" />,
+    text: "Advanced proficiency in React, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.",
+  },
+  {
+    id: nanoid(),
+    title: "Docker",
+    icon: <FaDocker className="h-14 w-14 text-sky-400 rounded shadow shadow-sky-600/40" />,
+    text: "Advanced proficiency in React, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.",
+  },
+  {
+    id: nanoid(),
+    title: "Git",
+    icon: <FaGitSquare className="h-14 w-14 text-sky-400 rounded shadow shadow-sky-600/40" />,
+    text: "Advanced proficiency in React, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.",
+  },
+  {
+    id: nanoid(),
+    title: "GitHub Actions (Coming Soon)",
+    icon: <SiGithubactions className="h-14 w-14 text-sky-400 rounded shadow shadow-sky-600/40" />,
     text: "Advanced proficiency in React, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.",
   },
 ];

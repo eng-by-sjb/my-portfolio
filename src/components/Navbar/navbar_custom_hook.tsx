@@ -14,7 +14,7 @@ export const useNavScroll = () => {
     }
 
     setPrevScrollPos(currentScrollPos);
-  }, [prevScrollPos]);
+  }, [prevScrollPos, setIsScrollDown]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);

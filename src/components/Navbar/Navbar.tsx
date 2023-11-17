@@ -16,7 +16,7 @@ const Navbar = () => {
       } ${
         window.scrollY <= 3
           ? "bg-sky-100"
-          : "drop-shadow rounded-b-xl bg-sky-100/50 backdrop-blur-lg"
+          : "drop-shadow rounded-b-xl bg-sky-100/40 backdrop-blur-md"
       }`}>
       <div className="align-elements flex flex-col text-center sm:flex-row sm:items-center sm:justify-between">
         <h2 className="text-3xl">
@@ -25,12 +25,12 @@ const Navbar = () => {
         </h2>
 
         <div
-          className={`transition duration-300 ease-out sm:scale-100 sm:h-auto sm:opacity-100 ${
+          className={` transition duration-300 ease-out sm:scale-100 sm:h-auto sm:opacity-100 ${
             isScrollDown
               ? "overflow-hidden duration-[500ms] opacity-0 scale-90"
               : "overflow-hidden duration-300 opacity-100"
           }`}>
-          <div className="px-2 mt-4 flex gap-x-3 justify-center sm:mt-0">
+          <div className="scale-90 px-2 mt-4 flex gap-x-3 justify-center sm:mt-0 sm:scale-100">
             {links.map(({ href, id, text }) => {
               return (
                 <a
@@ -48,4 +48,4 @@ const Navbar = () => {
     </nav>
   );
 };
-export default Navbar;
+export { Navbar };
