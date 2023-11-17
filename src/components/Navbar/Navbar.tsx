@@ -14,9 +14,9 @@ const Navbar = () => {
       className={`fixed w-screen z-50 top-0 transition-all overflow-hidden ease-out sm:h-auto ${
         isScrollDown ? "h-[68px] duration-[500ms]" : "h-[114px] duration-300"
       } ${
-        window.scrollY <= 3
+        window.scrollY <= 0
           ? "bg-sky-100"
-          : "drop-shadow rounded-b-xl bg-sky-100/40 backdrop-blur-md"
+          : "drop-shadow-md rounded-b-xl bg-sky-100/40 backdrop-blur-lg"
       }`}>
       <div className="align-elements flex flex-col text-center sm:flex-row sm:items-center sm:justify-between">
         <h2 className="text-3xl">
