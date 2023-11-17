@@ -60,7 +60,7 @@ const Hero = () => {
           </p>
           {/* shows on large screen */}
           <div
-            className={`hidden md:block transition ease-out duration-[4000ms] ${
+            className={`transition ease-out duration-[4000ms] ${
               isAnim ? "opacity-100" : "opacity-0"
             }`}>
             <div className="flex justify-center content-center gap-x-4 mt-8 animate-[pulse_5s_linear_infinite]">
@@ -78,11 +78,11 @@ const Hero = () => {
           {/* shows on large screen */}
         </div>
 
-        <img src={heroImg} alt="" className="scale-90 sm:scale-100" />
+        <img src={heroImg} alt="" className="hidden sm:block" />
 
         {/* shows on small screen */}
-        <div
-          className={`transition ease-out duration-[4000ms] md:hidden scale-90 ${
+        {/* <div
+          className={`transition ease-out duration-[4000ms] md:hidden ${
             isAnim ? "opacity-100" : "opacity-0"
           }`}>
           <div
@@ -99,7 +99,7 @@ const Hero = () => {
               <FaTwitterSquare className="hero-icons" />
             </a>
           </div>
-        </div>
+        </div> */}
         {/* shows on small screen */}
       </article>
     </section>
