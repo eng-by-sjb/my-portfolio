@@ -4,6 +4,7 @@ import { useNavScroll } from "./navbar_custom_hook";
 
 const Navbar = () => {
   const { isScrollDown } = useNavScroll();
+  // console.log(window.);
 
   const handleNavToHome = (e: MouseEvent<HTMLAnchorElement>) => {
     if (e.currentTarget.text === "home") window.scrollTo({ top: 0 });
@@ -30,13 +31,13 @@ const Navbar = () => {
               ? "overflow-hidden duration-[500ms] opacity-0 scale-90"
               : "overflow-hidden duration-300 opacity-100"
           }`}>
-          <div className=" px-2 mt-4 flex gap-x-3 justify-center sm:mt-0">
+          <div className=" mt-4 flex gap-x-3 justify-center sm:mt-0">
             {links.map(({ href, id, text }) => {
               return (
                 <a
                   onClick={handleNavToHome}
                   key={id}
-                  className="capitalize transition duration-300 ease-in hover:scale-110 hover:text-sky-600"
+                  className="capitalize tracking-wide transition duration-300 ease-in hover:scale-110 hover:text-sky-600"
                   href={href}>
                   {text}
                 </a>

@@ -16,7 +16,7 @@ const ToEndTechStackFloatBtn = () => {
   return (
     <button onClick={() => window.scrollTo({ top: 3500 })} className="md:hidden opacity-70">
       <div
-        className={`z-50 fixed right-2 bottom-[15rem] flex flex-col justify-center items-center transition-all ${FloatBtnAnimeStyles}`}>
+        className={`z-50 fixed right-2 top-[15rem] flex flex-col justify-center items-center transition-all ${FloatBtnAnimeStyles}`}>
         <BiDownArrowAlt className="bg-sky-400/70 rounded-b-xl rounded-t-md text-sky-900 text-3xl active:bg-sky-400" />
         <span className="text-center text-xs ">
           End
