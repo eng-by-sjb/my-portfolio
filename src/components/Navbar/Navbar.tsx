@@ -12,9 +12,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed w-screen z-50 top-0 transition-all overflow-hidden ease-out sm:h-auto ${
-        isScrollDown && window.scrollY === 0
-          ? "h-[68px] duration-[500ms]"
-          : "h-[114px] duration-300"
+        isScrollDown && window.scrollY < -1 ? "h-[68px] duration-[500ms]" : "h-[114px] duration-300"
       } ${
         window.scrollY <= 5
           ? "bg-sky-100"

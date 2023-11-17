@@ -82,7 +82,7 @@ const Hero = () => {
 
         {/* shows on small screen */}
         <div
-          className={`transition ease-out duration-[4000ms] md:hidden ${
+          className={`transition ease-out duration-[4000ms] md:hidden scale-90 ${
             isAnim ? "opacity-100" : "opacity-0"
           }`}>
           <div
