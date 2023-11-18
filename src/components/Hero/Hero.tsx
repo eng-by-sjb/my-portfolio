@@ -14,7 +14,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="bg-sky-100 h-[calc(100vh-(114px_*_2))] mt-[114px] flex items-center justify-center sm:h-[calc(100svh-(69px_*_2))] sm:mt-[69px]">
+    <section className="bg-sky-100 h-[calc(100vh-(113px_*_2))] flex items-center justify-center sm:h-[calc(100svh-(68px_*_2))]">
       <article className="align-elements grid md:grid-cols-2 items-center gap-8">
         <div>
           <h1 className="text-4xl font-bold text-center">
@@ -58,10 +58,10 @@ const Hero = () => {
           </p>
           {/* shows on large screen */}
           <div
-            className={`transition ease-out duration-[4000ms] ${
+            className={`mt-4 transition ease-out duration-[4000ms] ${
               isAnim ? "opacity-100" : "opacity-0"
             }`}>
-            <div className="flex justify-center content-center gap-x-4 mt-8 animate-[pulse_5s_linear_infinite]">
+            <div className="flex justify-center content-center pt-4 pb-4 gap-x-4 animate-[pulse_5s_linear_infinite]">
               <a href="">
                 <FaGithubSquare className="hero-icons" />
               </a>

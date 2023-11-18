@@ -3,13 +3,15 @@
 @tailwind utilities;
 
 @layer base {
+  *,
   html {
-    @apply scroll-smooth;
+    /* @apply scroll-smooth !important; */
+    scroll-behavior: smooth !important;
   }
 
   body {
     height: 30000px;
-    @apply bg-sky-100;
+    @apply bg-sky-400;
     /* @apply relative; */
   }
 

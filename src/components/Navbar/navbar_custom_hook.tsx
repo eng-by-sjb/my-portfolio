@@ -8,7 +8,7 @@ export const useNavScroll = () => {
   const handleScroll = useCallback(() => {
     const currentScrollPos = window.scrollY;
 
-    // console.log(currentScrollPos);
+    console.log(currentScrollPos);
 
     if (currentScrollPos > prevScrollPos) {
       setIsScrollDown(true);
@@ -16,7 +16,7 @@ export const useNavScroll = () => {
       setIsScrollDown(false);
     }
 
-    setIsHideNavBg(currentScrollPos <= 5);
+    setIsHideNavBg(currentScrollPos <= 100);
 
     setPrevScrollPos(currentScrollPos);
   }, [prevScrollPos]);

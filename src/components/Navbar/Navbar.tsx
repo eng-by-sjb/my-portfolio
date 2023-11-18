@@ -7,17 +7,15 @@ const Navbar = () => {
 
   const handleNavToHome = (e: MouseEvent<HTMLAnchorElement>) => {
     const target = e.currentTarget.text;
-    if (target === "home") window.scrollTo({ top: 0 });
+    if (target === "home") window.scrollTo({ top: 0, behavior: "smooth" });
     // if (target === "techStack") window.scrollTo({ top: 613 });
   };
 
   return (
     <nav
       className={`fixed w-screen z-50 top-0 transition-all overflow-hidden ease-out sm:h-auto ${
-        isScrollDown ? "h-[68px] duration-[500ms]" : "h-[114px] duration-300"
-      } ${
-        isHideNavBg ? "bg-sky-100" : "drop-shadow-md rounded-b-xl bg-sky-100/40 backdrop-blur-lg"
-      }`}>
+        isScrollDown && !isHideNavBg ? "h-[68px] duration-[500ms]" : "h-[114px] duration-300"
+      } ${isHideNavBg ? "bg-sky-100" : "shadow-md rounded-b-xl bg-sky-100/60 backdrop-blur-xl"}`}>
       <div className="align-elements flex flex-col text-center sm:flex-row sm:items-center sm:justify-between">
         <h2
           className="text-3xl cursor-pointer"
@@ -30,7 +28,7 @@ const Navbar = () => {
 
         <div
           className={` transition duration-300 ease-out sm:scale-100 sm:h-auto sm:opacity-100 ${
-            isScrollDown
+            isScrollDown && !isHideNavBg
               ? "overflow-hidden duration-[500ms] opacity-0 scale-90"
               : "overflow-hidden duration-300 opacity-100"
           }`}>
