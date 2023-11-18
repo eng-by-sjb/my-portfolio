@@ -1,19 +1,18 @@
 import { SectionTitle } from "../reusable_components";
 import { techStacks } from "../../data";
-import { useScrollPos } from "../reusable_custom_hooks";
+import { useScroll } from "../reusable_custom_hooks";
 import { TechStackCard } from "./TechStackCard";
-import ToEndTechStackFloatBtn from "./ToEndOfTechStackFloatBtn";
+import { ToEndTechStackFloatBtn } from "./ToEndOfTechStackFloatBtn";
 
 const TechStack = () => {
-  const { scrollPos } = useScrollPos();
+  const { isShowTechStack } = useScroll();
 
-  const sectionAnimeStyles =
-    scrollPos > 86
-      ? "duration-[1000ms] ease-out opacity-100"
-      : "duration-[500ms] ease-out opacity-0 scale-90";
+  const sectionAnimeStyles = isShowTechStack
+    ? "duration-[1000ms] ease-out opacity-100"
+    : "duration-[500ms] ease-out opacity-0 scale-90";
 
   return (
-    <section className="bg-gradient-to-t from-sky-400/50 to-sky-100/50">
+    <section id="tech-stack" className="bg-gradient-to-t from-sky-400/50 to-sky-100/50">
       <div className="align-elements backdrop-blur-lg">
         <SectionTitle title="Tech Stack" animeStyles={sectionAnimeStyles}></SectionTitle>
         <div

@@ -14,9 +14,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section
-      id="home"
-      className="bg-sky-100 h-[calc(100vh-(114px_*_2))] mt-[114px] flex items-center justify-center sm:h-[calc(100vh-(69px_*_2))] sm:mt-[69px]">
+    <section className="bg-sky-100 h-[calc(100vh-(114px_*_2))] mt-[114px] flex items-center justify-center sm:h-[calc(100svh-(69px_*_2))] sm:mt-[69px]">
       <article className="align-elements grid md:grid-cols-2 items-center gap-8">
         <div>
           <h1 className="text-4xl font-bold text-center">

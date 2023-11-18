@@ -6,6 +6,7 @@ function App() {
       <Navbar></Navbar>
       <Hero></Hero>
       <TechStack></TechStack>
+      {/* <ToEndTechStackFloatBtn /> */}
     </>
   );
 }

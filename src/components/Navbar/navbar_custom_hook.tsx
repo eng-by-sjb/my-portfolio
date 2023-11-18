@@ -1,11 +1,14 @@
 import { useCallback, useEffect, useState } from "react";
 
 export const useNavScroll = () => {
-  const [isScrollDown, setIsScrollDown] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [isScrollDown, setIsScrollDown] = useState(false);
+  const [isHideNavBg, setIsHideNavBg] = useState(true);
 
   const handleScroll = useCallback(() => {
     const currentScrollPos = window.scrollY;
+
+    // console.log(currentScrollPos);
 
     if (currentScrollPos > prevScrollPos) {
       setIsScrollDown(true);
@@ -13,8 +16,10 @@ export const useNavScroll = () => {
       setIsScrollDown(false);
     }
 
+    setIsHideNavBg(currentScrollPos <= 5);
+
     setPrevScrollPos(currentScrollPos);
-  }, [prevScrollPos, setIsScrollDown]);
+  }, [prevScrollPos]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -24,5 +29,5 @@ export const useNavScroll = () => {
     };
   }, [handleScroll]);
 
-  return { isScrollDown };
+  return { isScrollDown, isHideNavBg };
 };

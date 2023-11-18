@@ -5,8 +5,8 @@ import { SiHtml5, SiTurborepo, SiMongodb, SiGithubactions, SiTailwindcss } from 
 import { BiLogoTypescript, BiLogoPostgresql, BiLogoGoLang } from "react-icons/bi";
 
 export const links = [
-  { id: nanoid(), href: "#/", text: "home" },
-  { id: nanoid(), href: "#skills", text: "techStack" },
+  { id: nanoid(), href: "#home", text: "home" },
+  { id: nanoid(), href: "#tech-stack", text: "techStack" },
   { id: nanoid(), href: "#about", text: "about" },
   { id: nanoid(), href: "#projects", text: "projects" },
 ];
